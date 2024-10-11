@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#inicio {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#inicio h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+#comenzar-btn {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comenzar-btn:hover {
+    background-color: #218838;
+}
+.ocultar {
+    display: none;
+}
+
+#preguntas {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    <div id="temporizador">Tiempo restante: <span id="tiempo-restante">30</span> segundos</div>
+    <div id="retroalimentacion" class="retroalimentacion ocultar"></div>
+    <div id="barra-progreso-container">
+    <div id="barra-progreso"></div>
+    </div>
+}
+#barra-progreso-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#barra-progreso {
+    width: 0%;
+    height: 10px;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+#temporizador {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: hsl(354, 85%, 34%);
+}
+.retroalimentacion {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.retroalimentacion.correcto {
+    color: #28a745;
+}
+
+.retroalimentacion.incorrecto {
+    color: #4b0a0a;
+}
+.contenedor-pregunta {
+    margin-bottom: 20px;
+}
+
+#pregunta-texto {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#opciones-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+#opciones-lista li {
+    margin-bottom: 15px;
+}
+
+.opcion {
+    padding: 15px;
+    background-color: #0e7e86;
+    border: 2px solid #5c114c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.opcion:hover {
+    background-color: #47313d;
+    border-color: #4f4886;
+}
+
+.opcion.seleccionado {
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+#siguiente-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #40b8a4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#siguiente-btn:hover {
+    background-color: #11794e;
+}
+#resultados {
+    background-color: #b1af5d;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#resultados h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#resultados p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#reiniciar-btn {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #5e500e;
+    color: #b38282;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reiniciar-btn:hover {
+    background-color: #e0a800;
+}
+#mensaje-final {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #73599c;
+}
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #73599c; 
+    color: #343a40;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.pantalla {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pantalla.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pantalla:not(.ocultar) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.opcion {
+    background-color: #ffffff;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    padding: 15px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+@media (max-width: 600px) {
+    #preguntas {
+        padding: 20px;
+    }
+
+    #pregunta-texto {
+        font-size: 1.5em;
+    }
+
+    .opcion {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    #siguiente-btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+button {
+    transition: transform 0.3s;
+}
+
+button:active {
+    transform: scale(0.87);
+}
